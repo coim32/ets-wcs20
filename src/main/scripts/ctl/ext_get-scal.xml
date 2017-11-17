@@ -333,6 +333,7 @@
 										<xsl:value-of select="$GridCoverageId"/>
 									</ctl:param>
 									<ctl:param name="SCALEFACTOR">2.0</ctl:param>
+									<ctl:param name="FORMAT">application/gml%2Bxml</ctl:param>
 									<ctlp:XMLValidatingParser>
 										<ctlp:schemas>
 											<ctlp:schema type="url">http://schemas.opengis.net/wcs/2.0/wcsAll.xsd</ctlp:schema>
