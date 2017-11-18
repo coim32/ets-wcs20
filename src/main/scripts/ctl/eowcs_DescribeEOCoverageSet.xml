@@ -64,7 +64,7 @@
 				<ctl:with-param name="url" select="$url"/>
 				<ctl:with-param name="Capabilities" select="$Capabilities"/>
 			</ctl:call-test>
-			<ctl:call-test name="wcseo:req63">
+			<ctl:call-test name="wcseo:req63-66">
 				<ctl:with-param name="url" select="$url"/>
 				<ctl:with-param name="Capabilities" select="$Capabilities"/>
 			</ctl:call-test>
@@ -2856,7 +2856,7 @@
 						</xsl:when>
 						<xsl:otherwise>
 							<xsl:for-each select="$DescribeEOCoverageSet//*[local-name()='CoverageDescriptions']/*[local-name()='CoverageDescription']">
-								<xsl:if test="not(index-of(('RectifiedDataset','RectifiedDataset','RectifiedStitchedMosaic','ReferenceableStitchedMosaic'),.//*[local-name()='CoverageSubtype'])>0)">
+								<xsl:if test="not(index-of(('RectifiedDataset','ReferenceableDataset','RectifiedStitchedMosaic','ReferenceableStitchedMosaic'),.//*[local-name()='CoverageSubtype'])>0)">
 									<ctl:message>[FAILURE] The CoverageSubtype of <xsl:value-of select="./@*[local-name()='id']"/> is unknown </ctl:message>
 									<ctl:fail/>
 								</xsl:if>
